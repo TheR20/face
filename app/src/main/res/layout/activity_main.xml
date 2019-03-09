@@ -14,15 +14,16 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="146dp"
+            android:layout_width="0dp"
             android:layout_height="66dp"
+            android:layout_weight="1"
             android:text="Accion1"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="146dp"
+            android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
             android:text="Accion2"
@@ -31,7 +32,7 @@
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="146dp"
+            android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
             android:text="Accion3"
