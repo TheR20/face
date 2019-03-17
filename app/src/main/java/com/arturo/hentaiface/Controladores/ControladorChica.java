@@ -19,7 +19,9 @@ public class ControladorChica extends VinculoBD {
     }
 
 
-    public ArrayList<ModeloChica> obtenerElemento(String name, int number) {
+    public ModeloChica obtenerElemento(String name, int number) {
+
+        ModeloChica modelo = new ModeloChica();
         open();
 
         Cursor cursor;
@@ -36,16 +38,17 @@ public class ControladorChica extends VinculoBD {
                 "WHERE chica = ?", new String[]{name});
         if (cursor.moveToFirst()) {
             while (!cursor.isAfterLast()) {
-                final ModeloChica model = new ModeloChica();
-                model.setNombreChica(cursor.getString(0));
-                model.setUrlFoto(cursor.getString(1));
-                model.setUrlAudio(cursor.getString(2));
-                elementos.add(model);
+
+                modelo.setNombreChica(cursor.getString(0));
+                modelo.setUrlFoto(cursor.getString(1));
+                modelo.setUrlAudio(cursor.getString(2));
+
                 cursor.moveToNext();
             }
             cursor.close();
             close();
-            return elementos;
+
+            return modelo;
         } else {
             return null;
         }
