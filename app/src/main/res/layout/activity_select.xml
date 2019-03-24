@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    tools:context=".SelectActivity">
+
+    <ListView
+        android:id="@+id/listMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#404040"
+        android:dividerHeight="0dp"
+        tools:listheader="@tools:sample/date/mmddyy"
+        tools:listfooter="@tools:sample/avatars"
+        android:minHeight="120dp"/>
+
+    <!-- <com.google.android.gms.ads.AdView
+         android:id="@+id/adView"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="10dp"
+         android:layout_centerHorizontal="true"
+         app:adSize="BANNER"
+         app:adUnitId="ca-app-pub-5146175048698339/1447542724">
+
+     </com.google.android.gms.ads.AdView>-->
+
+</LinearLayout>

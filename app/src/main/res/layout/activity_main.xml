@@ -2,10 +2,76 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/prueba"
-    tools:context=".MainActivity" >
+    android:background="@drawable/ic_launcher_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagep"
+        android:layout_width="match_parent"
+        android:layout_height="689dp"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignBottom="@+id/imagep"
+        android:layout_marginBottom="76dp"
+        android:max="100"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="46dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bo4"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:onClick="Cambio4"
+            android:text="Accion2"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+        <Button
+            android:id="@+id/bo5"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:onClick="Cambio5"
+            android:text="Accion1"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+        <Button
+            android:id="@+id/bo6"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:onClick="Cambio6"
+            android:text="Accion1"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+        <Button
+            android:id="@+id/salida"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:onClick="Cambio6"
+            android:text="Accion3"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,31 +79,33 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bo"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
+            android:onClick="Cambio1"
             android:text="Accion1"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/bo2"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
+            android:onClick="Cambio2"
             android:text="Accion2"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/bo3"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
+            android:onClick="Cambio3"
             android:text="Accion3"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
     </LinearLayout>
-
 </RelativeLayout>
