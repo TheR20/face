@@ -14,6 +14,9 @@ import com.arturo.hentaiface.Controladores.ControladorChica;
 public class SelectActivity extends AppCompatActivity {
 
     private ListView listMain;
+    private AdView mAdView;
+
+    String nombre = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,5 +43,9 @@ public class SelectActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        MobileAds.initialize(this, "ca-app-pub-5146175048698339/8125361594");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 }

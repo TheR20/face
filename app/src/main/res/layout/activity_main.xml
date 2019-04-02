@@ -5,14 +5,14 @@
     android:id="@+id/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_background"
+    android:background="@drawable/fond"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imagep"
         android:layout_width="match_parent"
         android:layout_height="689dp"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/fond" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -26,9 +26,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="46dp"
+        android:layout_height="106dp"
+        android:layout_alignBottom="@+id/imagep"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
 
         <Button
@@ -37,7 +37,7 @@
             android:layout_height="66dp"
             android:layout_weight="1"
             android:onClick="Cambio4"
-            android:text="Accion2"
+            android:text="Action 4"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
@@ -47,7 +47,7 @@
             android:layout_height="66dp"
             android:layout_weight="1"
             android:onClick="Cambio5"
-            android:text="Accion1"
+            android:text="Action 5"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
@@ -57,7 +57,7 @@
             android:layout_height="66dp"
             android:layout_weight="1"
             android:onClick="Cambio6"
-            android:text="Accion1"
+            android:text="Action 6"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
@@ -66,8 +66,8 @@
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
-            android:onClick="Cambio6"
-            android:text="Accion3"
+            android:onClick="regresar"
+            android:text="Close"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
@@ -84,7 +84,7 @@
             android:layout_height="66dp"
             android:layout_weight="1"
             android:onClick="Cambio1"
-            android:text="Accion1"
+            android:text="Action 1"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
@@ -94,7 +94,7 @@
             android:layout_height="66dp"
             android:layout_weight="1"
             android:onClick="Cambio2"
-            android:text="Accion2"
+            android:text="Action 2"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
 
@@ -104,7 +104,7 @@
             android:layout_height="66dp"
             android:layout_weight="1"
             android:onClick="Cambio3"
-            android:text="Accion3"
+            android:text="Action 3"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="34dp" />
     </LinearLayout>

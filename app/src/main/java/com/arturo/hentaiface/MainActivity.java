@@ -1,5 +1,6 @@
 package com.arturo.hentaiface;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import android.widget.RelativeLayout;
 import com.arturo.hentaiface.Controladores.ControladorChica;
 import com.arturo.hentaiface.Modelos.ModeloChica;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.Random;
 
@@ -28,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private String autdio;
     private ProgressBar simpleProgressBar;
     int cuenta = 0;
-
+    String Nombre = "";
+    private AdView mAdView;
     MediaPlayer md;
 
     @Override
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initComponents() {
 
+
+        Intent intent = getIntent();
         simpleProgressBar = findViewById(R.id.progressBar); // initiate the progress bar
         simpleProgressBar.setMax(100); // 100 maximum value for the progress value
 
@@ -58,7 +64,11 @@ public class MainActivity extends AppCompatActivity {
         b3.setEnabled(false);
         b4.setEnabled(false);
         b5.setEnabled(false);
-
+        Nombre =  intent.getStringExtra("nombre");
+        MobileAds.initialize(this, "ca-app-pub-5146175048698339/5220830801");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
 
@@ -286,9 +296,9 @@ public class MainActivity extends AppCompatActivity {
     public void llamada(int numero) {
         ControladorChica controlador = new ControladorChica(this);
         ModeloChica modelo = new ModeloChica();
-        modelo = controlador.obtenerElemento("Asuna", numero);
+        modelo = controlador.obtenerElemento(Nombre, numero);
         foto = modelo.getUrlFoto();
-        Glide.with(this).load(foto).placeholder(R.mipmap.ic_launcher).into(imagen);
+        Glide.with(this).load(foto).placeholder(R.drawable.prueba).into(imagen);
     }
 
     public void revisarprogreso() {
@@ -313,6 +323,13 @@ public class MainActivity extends AppCompatActivity {
             b5.setEnabled(true);
 
 
+    }
+
+
+    public void regresar(View view){
+
+        Intent intent = new Intent(this, SelectActivity.class);
+        startActivity(intent);
     }
 
 }
