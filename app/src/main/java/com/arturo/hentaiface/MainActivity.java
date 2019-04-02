@@ -14,6 +14,7 @@ import com.arturo.hentaiface.Controladores.ControladorChica;
 import com.arturo.hentaiface.Modelos.ModeloChica;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
 import java.util.Random;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Button b4;
     private Button b5;
     private String foto;
+
     private String autdio;
     private ProgressBar simpleProgressBar;
     int cuenta = 0;
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         b3.setEnabled(false);
         b4.setEnabled(false);
         b5.setEnabled(false);
-        Nombre =  intent.getStringExtra("nombre");
+        Nombre = intent.getStringExtra("nombre");
         MobileAds.initialize(this, "ca-app-pub-5146175048698339/5220830801");
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -326,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void regresar(View view){
+    public void regresar(View view) {
 
         Intent intent = new Intent(this, SelectActivity.class);
         startActivity(intent);
