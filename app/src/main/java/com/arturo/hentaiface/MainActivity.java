@@ -50,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
         b4 = findViewById(R.id.bo5);
         b5 = findViewById(R.id.bo6);
         initComponents();
-
+        MobileAds.initialize(this, "ca-app-pub-5146175048698339~3372083588");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
 
@@ -67,10 +70,7 @@ public class MainActivity extends AppCompatActivity {
         b4.setEnabled(false);
         b5.setEnabled(false);
         Nombre = intent.getStringExtra("nombre");
-        MobileAds.initialize(this, "ca-app-pub-5146175048698339/5220830801");
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+
     }
 
 
