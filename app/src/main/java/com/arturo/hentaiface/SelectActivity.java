@@ -10,11 +10,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.arturo.hentaiface.Controladores.ControladorChica;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class SelectActivity extends AppCompatActivity {
 
     private ListView listMain;
-    //private AdView mAdView;
+    private AdView mAdView;
 
     String nombre = "";
 
@@ -43,9 +46,9 @@ public class SelectActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-      /*  MobileAds.initialize(this, "ca-app-pub-5146175048698339/8125361594");
+        MobileAds.initialize(this, "ca-app-pub-5146175048698339/8125361594");
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);*/
+        mAdView.loadAd(adRequest);
     }
 }

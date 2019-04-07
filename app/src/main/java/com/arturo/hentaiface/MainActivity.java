@@ -329,9 +329,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void regresar(View view) {
-
         Intent intent = new Intent(this, SelectActivity.class);
         startActivity(intent);
     }
-
 }
