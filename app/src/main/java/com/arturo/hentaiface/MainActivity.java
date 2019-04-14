@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     int cuenta = 0;
     String Nombre = "";
     private AdView mAdView;
+    private AdView mAdView2;
     MediaPlayer md;
 
     @Override
@@ -52,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
         MobileAds.initialize(this, "ca-app-pub-5146175048698339~3372083588");
         mAdView = findViewById(R.id.adView);
+        mAdView2 = findViewById(R.id.adw);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        mAdView2.loadAd(adRequest);
 
     }
 
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Cambio1(View view) {
         llamada((1));
-        cuenta = cuenta + 1;
+        cuenta = cuenta + 2;
         simpleProgressBar.setProgress(cuenta);
         revisarprogreso();
         Sonido(1);
@@ -84,14 +87,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void Cambio2(View view) {
         llamada((2));
-        cuenta = cuenta + 3;
+        cuenta = cuenta + 4;
         simpleProgressBar.setProgress(cuenta);
         revisarprogreso();
         Sonido(2);
     }
 
     public void Cambio3(View view) {
-        cuenta = cuenta + 5;
+        cuenta = cuenta + 6;
         simpleProgressBar.setProgress(cuenta);
         llamada((3));
         revisarprogreso();
@@ -99,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Cambio4(View view) {
-        cuenta = cuenta + 7;
+        cuenta = cuenta + 8;
         simpleProgressBar.setProgress(cuenta);
         llamada((4));
         revisarprogreso();

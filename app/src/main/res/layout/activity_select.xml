@@ -21,11 +21,12 @@
         tools:listheader="@tools:sample/date/mmddyy" />
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
+        android:id="@+id/adw2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginBottom="10dp"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-5146175048698339/1447542724" />
+        app:adUnitId="ca-app-pub-5146175048698339/2302538329" />
+
 
 </LinearLayout>

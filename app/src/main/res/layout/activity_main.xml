@@ -12,6 +12,7 @@
         android:id="@+id/imagep"
         android:layout_width="match_parent"
         android:layout_height="689dp"
+        android:contentDescription="ddddd"
         app:srcCompat="@drawable/fond" />
 
     <com.google.android.gms.ads.AdView
@@ -19,10 +20,18 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="0dp"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-5146175048698339/2302538329"
-        />
+        app:adUnitId="ca-app-pub-5146175048698339/2302538329" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adw"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="606dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-5146175048698339/2302538329" />
 
     <ProgressBar
         android:id="@+id/progressBar"

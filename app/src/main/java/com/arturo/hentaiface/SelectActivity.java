@@ -25,7 +25,13 @@ public class SelectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
+
         initComponents();
+        MobileAds.initialize(this, "ca-app-pub-5146175048698339~3372083588");
+        mAdView = findViewById(R.id.adw2);
+        AdRequest adRequest = new AdRequest.Builder().build();
+         mAdView.loadAd(adRequest);
+
     }
 
     void initComponents() {
@@ -46,9 +52,6 @@ public class SelectActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        MobileAds.initialize(this, "ca-app-pub-5146175048698339/8125361594");
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+
     }
 }

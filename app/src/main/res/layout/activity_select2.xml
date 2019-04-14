@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SelectActivity">
 
+
     <ListView
         android:id="@+id/listMain"
         android:layout_width="match_parent"
@@ -14,7 +15,8 @@
         android:divider="#404040"
         android:dividerHeight="4dp" />
 
-   <!-- <com.google.android.gms.ads.AdView
+
+    <!-- <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,6 +34,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
+
     </FrameLayout>
 
 </RelativeLayout>
