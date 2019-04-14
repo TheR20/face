@@ -5,28 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="5dp"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="5dp"
     android:layout_marginEnd="5dp"
     android:orientation="vertical"
     tools:context=".SelectActivity">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-5146175048698339/2302538329" />
 
     <ListView
         android:id="@+id/listMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="#404040"
-        android:dividerHeight="0dp"
-        android:minHeight="120dp"
-        tools:listfooter="@tools:sample/avatars"
-        tools:listheader="@tools:sample/date/mmddyy" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adw2"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="10dp"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-5146175048698339/2302538329" />
-
+        android:dividerHeight="2dp" />
 
 </LinearLayout>

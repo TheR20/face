@@ -31,7 +31,6 @@ public class SelectActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adw2);
         AdRequest adRequest = new AdRequest.Builder().build();
          mAdView.loadAd(adRequest);
-
     }
 
     void initComponents() {
